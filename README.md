@@ -1,53 +1,35 @@
-# accent
+# Catbook
+CATbook is a CATegory-centric Jekyll theme for bloggers. There is a switch button to toggle between dark mode and light mode. This theme is originally inspired from [Book](https://github.com/kkninjae/book).
 
-#### [Demo & Documentation](http://ankitsultana.com/accent)
+[![LICENSE](https://img.shields.io/badge/license-MIT-blue.svg)](LICENSE) ![GENERATOR](https://img.shields.io/badge/made_with-jekyll-blue.svg) ![VERSION](https://img.shields.io/badge/current_version-1.0-green.svg)
 
-### Installation
+**Demo:** https://starry99.github.io/catbook/
 
-I'd strongly recommend you to fork [accent](http://github.com/bk2dcradle/accent) and use the "upstream" strategy described on [this page](https://help.github.com/articles/fork-a-repo/) to
-keep accent up to date.
+![SCREENSHOT](https://starry99.github.io/catbook/assets/img/lmode.jpg)
+![SCREENSHOT](https://starry99.github.io/catbook/assets/img/dmode.jpg)
 
-If you don't want to do that, just clone [accent](http://github.com/bk2dcradle/accent) and use
+## Setup
 
-```bash
-bundle exec jekyll serve
+```sh
+$ git clone https://github.com/starry99/catbook
+$ jekyll serve
+
+# Now you can start customization!
 ```
-in the root of the accent directory, or, simply [download](https://github.com/bk2dcradle/accent/archive/gh-pages.zip) accent.
 
-### Customization
+## Make it yours
 
-You can edit the variables in `_config.yml` as per your needs. Edit only the variables under the section marked *User Settings*.
-
-Most of the variables are self explanatory. Notes about few of the non obvious ones:
-
-1. You can change the **hex value** of the variable `$accent-color` in `_sass/_style.scss` to any color value that you want. This will change the accent of the theme.
-
-2. Set `intro` to `true` to reveal a short bio section on the index page.
-
-3. Setting `about_footer` to *true* or *false* will turn the `about` section at the bottom of every post to *on* or *off* respectively.
-
-4. `description` is the summary that will show up in places like facebook thumbnails,
-twitter cards and google search results.
-
-
-*Note:* Don't change any variable under *Build Settings*.
-
+If you want to create a new category, you need to create `*name*.html` in the `categories` folder. And add the following content:
+```html
+---
+layout: page
+type: *name*
 ---
 
-### Usage
-
-* To create a new post, simply save the `.markdown` file in the `_posts` directory in the format.
-
+{% include archive.html %}
 ```
-year-month-day-name-of-the-file.markdown
-```
+Then the number of pages in the category will be displayed.
 
-* For Syntax highlighting, accent uses *Rouge* which is the default highlighter in Jekyll 3 and above. If you don't know how to highlight a code block, [refer](http://jekyllrb.com/docs/templates/).
+## License
 
-* To set up Google Analytics tracking id, just set the `tracking_id` variable in `_config.yml`.
-
----
-
-### License
-
-[MIT](https://github.com/bk2dcradle/accent/blob/gh-pages/LICENSE). Copyright &copy; [Ankit Sultana](http://twitter.com/AnkitSultana)
+[MIT License](https://opensource.org/licenses/MIT)
